@@ -12,12 +12,14 @@
 <body style="margin:0; padding:0; background-color:#F2F2F2;">
 
 <h1>Welcome to the TEST PK Dawlance Enhanced Chat - 202601141120</h1>
+
+
 <script type='text/javascript'>
 	function initEmbeddedMessaging() {
 		try {
 			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
 			embeddedservice_bootstrap.settings.hideChatButtonOnLoad = true;
-			
+
 			embeddedservice_bootstrap.init(
 				'00D0E00000022q8',
 				'ARC_PK_EnhancedChatDeployment_Dawlance',
@@ -39,11 +41,12 @@
         console.log("onEmbeddedMessagingReady event triggered");
         
         //set visible prechat field
-        embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({
+        embeddedservice_bootstrap.prechatAPI.setVisiblePrechatFields({
             // List the pre-chat field names with the value and whether
             // it's editable in the pre-chat form.
             "Country Code": {
-            "value": "92",
+              "value": sDefaultCountryCode,
+              "isEditableByEndUser": false
             }
         });
       
